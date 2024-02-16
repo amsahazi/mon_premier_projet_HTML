@@ -1,17 +1,23 @@
 <!DOCTYPE html>
+<!--balise html qui permet de definir la structure d'un document ecrit en html-->
 <html lang="en">
+    <!--le head fournit des informations generals sur le document (incluant un titre et de lien vers des scripts ou bien de lien de feuille de style)-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<!--il represente le contenu principale du document html(le corps)-->
 <body>
+    <!--balise qui indique un titre de niveau 1-->
     <h1>
         Mes jours de vacances
     </h1>
+    <!--niveau 2-->
     <h2>
         Marseille
     </h2>
+    <!--balise qui indique un paragraphe-->
     <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quisquam vitae autem minus quaerat a eius, ex obcaecati et expedita exercitationem eos? Asperiores nulla obcaecati molestiae, labore nostrum veniam provident.
         Sunt sequi consequatur nisi dolores nesciunt laborum accusamus est. Optio ad doloribus harum ipsam quaerat voluptatem perspiciatis eum, ut excepturi sapiente, repellat mollitia totam corporis magni, tempore sit quo eos!
@@ -19,35 +25,71 @@
         Nisi natus asperiores repellendus eos maxime officia est cum fugit? Facere repellendus amet in, ex perspiciatis autem dolorem neque tempora voluptatum sapiente praesentium. Libero expedita enim harum error! Atque, ullam.
         Eveniet blanditiis eligendi dolore maiores modi? Quae quo laboriosam sapiente possimus itaque deserunt deleniti voluptates soluta neque consequatur? Neque est obcaecati dolor nam sunt ex omnis dolores magni veritatis nostrum.
     </p>
+    <!--balise qui structure des elements non ordonnés(..)-->
     <ul>
+        <!--balise qui permet de lister-->
         <li>visite</li>
         <li>repos</li>
         <li>pose dejeuner</li>
     </ul>
+    <!--balise qui structure des elements ordonnés-->
     <ol>
+        <!--balise qui permet de créer un lien(apartir href(#))=> bloc de lien intern(sur la même page)-->
         <li><a href="#visite">Visite</a></li>
         <li><a href="#repos">Repos</a></li>
         <li><a href="#pose_dejeuner">Pose dejeuner</a></li>
         <li><a href="#contact">Contact</a></li>
     </ol>
+<!--balise qui permet de créer un lien externe(href ") -->
     <h3><a href="https://formations.automationtesteracademy.com/mon-espace/formations/html-css/elements/134281">cliquez sur ce lien pour acceder au cours</a></h3>
     <h4><a href="https://github.com/amsahazi/mon_premier_projet_HTML.git">cliquez sur ce lien pour acceder à mon repository</a></h4>
+    <!--appelons le lien intern #visite avec l'attribut (id) dans la balise h2-->
 <h2 id="visite">Visite</h2>
+<!--balise qui permet d'inserer une image-->
 <img src="Image/photo mars.jpg" alt="photo de visite">
 <p>lors d'une visite familiale à marseille</p>
 <h2 id="contact">Contact</h2>
-<form action="#">
+<!--creation de formulaire-->
+<form method="">
+    <!--balise permetant d'encadrer le formulaire-->
+    <fieldset>
+    
+     <legend>Formulaire de contact</legend>
+    <!--balise pour afficher un element dans un ecran-->
    <label for="name">Nom:</label>
-   <input type="text" name="nom" placeholder="Entrez votre nom"><br>
+   <!--inserer un champ de saisi (nom,prenom ou e-mail)-->
+   <input type="text" name="nom" placeholder="Entrez votre nom" required><br> <!--c est pour securiser le champ avec le msg veuillez renseigner le champ-->
    <label for="prenom">Prénom:</label>
-   <input type="text" name="prenom" placeholder="Entrez votre prénom"><br>
+   <input type="text" name="prenom" placeholder="Entrez votre prénom" required><br>
    <label for="email">Email:</label>
-   <input type="email" name="email" id="email" placeholder="exemple@gmail.com"><br>
+   <input type="email" name="email" placeholder="exemple@gmail.com" required><br>
     <label for="radio">Est ce que tu recommendes ATA ?</label>
-    <input type="radio" name="radio" id="oui" value="OUI" checked> OUI
-    <input type="radio" name="radios" id="non" value="NON"> NON
-     <input type="radio" name="radi" id="peut" value="PEUT-ETRE"> PEUT-ETRE
-
+    <input type="radio" name="radio" value="OUI" checked>
+    <label for="oui">OUI</label>
+    <input type="radio" name="radio" value="NON">
+    <label for="non">NON</label>
+     <input type="radio" name="radio" value="PEUT-ETRE">
+     <label for="peut_etre">PEUT-ETRE</label> <br>
+     <label for="framework">Quels sont les frameworks d'automatisation que vous connaissez?</label>
+     <input type="checkbox" name="check" value="cypress"checked>
+     <label for="cypress">Cypress</label>
+     <input type="checkbox" name="check" value="selinium">
+     <label for="selinium">Selinium</label>
+     <input type="checkbox" name="check" value="protractor">
+     <label for="protractor">Proctractor</label>
+     <input type="checkbox" name="check" value="appium">
+     <label for="appium">Appium</label><br>
+     <label for="html">Comment vous trouvez HTML ?</label>
+     <select name="language">
+      <option value="facile" selected>Facile</option> 
+      <option value="moyen">Moyen</option>
+      <option value="dur">Dur</option>
+      <option value="tres_dur">Très dur</option>
+     </select>
+     <input type="submit" value="Envoyer">
+     <input type="reset" value="Annuler">
+     
+    </fieldset>
     </form>
 </body>
 </html>
